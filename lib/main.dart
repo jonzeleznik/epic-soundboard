@@ -12,6 +12,18 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   AudioCache _audioCache;
 
+  Widget buildButton(String gif, String sound) {
+    return Container(
+      width: 100,
+      height: 100,
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10),
+          image: DecorationImage(image: AssetImage(gif), fit: BoxFit.cover)),
+      child:
+          FlatButton(onPressed: () => _audioCache.play(sound), child: Text('')),
+    );
+  }
+
   @override
   void initState() {
     super.initState();
@@ -24,6 +36,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.black,
         appBar: AppBar(
@@ -51,46 +64,11 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  Container(
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                            image: AssetImage("assets/images/vecAlMn.gif"),
-                            fit: BoxFit.cover)),
-                    child: FlatButton(
-                        onPressed: () => _audioCache.play('vecAlMn.mp3'),
-                        child: Text('')),
-                  ),
+                  buildButton("assets/images/vecAlMn.gif", 'vecAlMn.mp3'),
                   SizedBox(width: 20),
-                  Container(
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                            image: AssetImage("assets/images/dejansko.gif"),
-                            fit: BoxFit.cover)),
-                    child: FlatButton(
-                        onPressed: () => _audioCache.play('dejansko.mp3'),
-                        child: Text('')),
-                  ),
+                  buildButton("assets/images/dejansko.gif", 'dejansko.mp3'),
                   SizedBox(width: 20),
-                  Container(
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                            image: AssetImage("assets/images/smola.gif"),
-                            fit: BoxFit.cover)),
-                    child: FlatButton(
-                        onPressed: () => _audioCache.play(
-                              'smola.mp3',
-                            ),
-                        child: Text('')),
-                  ),
+                  buildButton("assets/images/smola.gif", 'smola.mp3'),
                 ],
               ),
 
@@ -100,96 +78,29 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  Container(
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                            image: AssetImage("assets/images/gotchaBitch.gif"),
-                            fit: BoxFit.cover)),
-                    child: FlatButton(
-                        onPressed: () => _audioCache.play('Gotcha Bitch.mp3'),
-                        child: Text('')),
-                  ),
+                  buildButton(
+                      "assets/images/gotchaBitch.gif", 'Gotcha Bitch.mp3'),
                   SizedBox(width: 20),
-                  Container(
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                            image: AssetImage("assets/images/thatsRacist.gif"),
-                            fit: BoxFit.cover)),
-                    child: FlatButton(
-                        onPressed: () => _audioCache.play("That's Racist.mp3"),
-                        child: Text('')),
-                  ),
+                  buildButton(
+                      "assets/images/thatsRacist.gif", "That's Racist.mp3"),
                   SizedBox(width: 20),
-                  Container(
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                            image:
-                                AssetImage("assets/images/whatTheFWasThat.gif"),
-                            fit: BoxFit.cover)),
-                    child: FlatButton(
-                        onPressed: () =>
-                            _audioCache.play('What in the Fck was that.mp3'),
-                        child: Text('')),
-                  ),
+                  buildButton("assets/images/whatTheFWasThat.gif",
+                      'What in the Fck was that.mp3'),
                 ],
               ),
-
               SizedBox(height: 20),
 //--------------------------------3rd ROW------------------------------------------------
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  Container(
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                            image: AssetImage("assets/images/wow.gif"),
-                            fit: BoxFit.cover)),
-                    child: FlatButton(
-                        onPressed: () => _audioCache.play('Anime wow.mp3'),
-                        child: Text('')),
-                  ),
+                  buildButton("assets/images/wow.gif", 'Anime wow.mp3'),
                   SizedBox(width: 20),
-                  Container(
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                            image: AssetImage("assets/images/itIsWhatItIs.gif"),
-                            fit: BoxFit.cover)),
-                    child: FlatButton(
-                        onPressed: () =>
-                            _audioCache.play('IT IS WHAT IT IS.mp3'),
-                        child: Text('')),
-                  ),
+                  buildButton(
+                      "assets/images/itIsWhatItIs.gif", 'IT IS WHAT IT IS.mp3'),
                   SizedBox(width: 20),
-                  Container(
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                            image:
-                                AssetImage("assets/images/ImBrokeAsShit.gif"),
-                            fit: BoxFit.cover)),
-                    child: FlatButton(
-                        onPressed: () =>
-                            _audioCache.play('IM BROKE AS SHIT.mp3'),
-                        child: Text("")),
-                  ),
+                  buildButton("assets/images/ImBrokeAsShit.gif",
+                      'IM BROKE AS SHIT.mp3'),
                 ],
               ),
 
@@ -199,46 +110,12 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  Container(
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                            image: AssetImage("assets/images/helloMF.gif"),
-                            fit: BoxFit.cover)),
-                    child: FlatButton(
-                        onPressed: () => _audioCache.play('Hello Mf.mp3'),
-                        child: Text('')),
-                  ),
+                  buildButton("assets/images/helloMF.gif", 'Hello Mf.mp3'),
                   SizedBox(width: 20),
-                  Container(
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                            image: AssetImage("assets/images/gaay.gif"),
-                            fit: BoxFit.cover)),
-                    child: FlatButton(
-                        onPressed: () => _audioCache.play('HaGay.mp3'),
-                        child: Text('')),
-                  ),
+                  buildButton("assets/images/gaay.gif", 'HaGay.mp3'),
                   SizedBox(width: 20),
-                  Container(
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                            image:
-                                AssetImage("assets/images/minecraftPotion.gif"),
-                            fit: BoxFit.cover)),
-                    child: FlatButton(
-                        onPressed: () =>
-                            _audioCache.play('Minecraft Drinking.mp3'),
-                        child: Text('')),
-                  ),
+                  buildButton("assets/images/minecraftPotion.gif",
+                      'Minecraft Drinking.mp3'),
                 ],
               ),
               SizedBox(height: 20),
@@ -247,45 +124,12 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  Container(
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                            image: AssetImage("assets/images/lierlier.gif"),
-                            fit: BoxFit.cover)),
-                    child: FlatButton(
-                        onPressed: () =>
-                            _audioCache.play('Liar Liar Pants On Fire.wav'),
-                        child: Text('')),
-                  ),
+                  buildButton("assets/images/lierlier.gif",
+                      'Liar Liar Pants On Fire.wav'),
                   SizedBox(width: 20),
-                  Container(
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                            image: AssetImage("assets/images/headShake.gif"),
-                            fit: BoxFit.cover)),
-                    child: FlatButton(
-                        onPressed: () => _audioCache.play('Head Shake.mp3'),
-                        child: Text('')),
-                  ),
+                  buildButton("assets/images/headShake.gif", 'Head Shake.mp3'),
                   SizedBox(width: 20),
-                  Container(
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                            image: AssetImage("assets/images/boi.gif"),
-                            fit: BoxFit.cover)),
-                    child: FlatButton(
-                        onPressed: () => _audioCache.play('Boi.mp3'),
-                        child: Text('')),
-                  ),
+                  buildButton("assets/images/boi.gif", 'Boi.mp3'),
                 ],
               ),
               SizedBox(height: 20),
@@ -294,44 +138,12 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  Container(
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                            image: AssetImage("assets/images/nope.gif"),
-                            fit: BoxFit.cover)),
-                    child: FlatButton(
-                        onPressed: () => _audioCache.play('Nope.mp3'),
-                        child: Text('')),
-                  ),
+                  buildButton("assets/images/nope.gif", 'Nope.mp3'),
                   SizedBox(width: 20),
-                  Container(
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                            image: AssetImage("assets/images/marioJump.gif"),
-                            fit: BoxFit.cover)),
-                    child: FlatButton(
-                        onPressed: () => _audioCache.play('MarioJump.mp3'),
-                        child: Text('')),
-                  ),
+                  buildButton("assets/images/marioJump.gif", 'MarioJump.mp3'),
                   SizedBox(width: 20),
-                  Container(
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                            image: AssetImage("assets/images/robloxDeth.gif"),
-                            fit: BoxFit.cover)),
-                    child: FlatButton(
-                        onPressed: () => _audioCache.play('RobloxDeath.mp3'),
-                        child: Text('')),
-                  ),
+                  buildButton(
+                      "assets/images/robloxDeth.gif", 'RobloxDeath.mp3'),
                 ],
               ),
               SizedBox(height: 20),
@@ -340,45 +152,12 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  Container(
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                            image: AssetImage("assets/images/gayShit.gif"),
-                            fit: BoxFit.cover)),
-                    child: FlatButton(
-                        onPressed: () =>
-                            _audioCache.play('Missmewiththatgayshit.mp3'),
-                        child: Text('')),
-                  ),
+                  buildButton(
+                      "assets/images/gayShit.gif", 'Missmewiththatgayshit.mp3'),
                   SizedBox(width: 20),
-                  Container(
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                            image: AssetImage("assets/images/heheBoi.gif"),
-                            fit: BoxFit.cover)),
-                    child: FlatButton(
-                        onPressed: () => _audioCache.play('heheBoi.mp3'),
-                        child: Text('')),
-                  ),
+                  buildButton("assets/images/heheBoi.gif", 'heheBoi.mp3'),
                   SizedBox(width: 20),
-                  Container(
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                            image: AssetImage("assets/images/punch.gif"),
-                            fit: BoxFit.cover)),
-                    child: FlatButton(
-                        onPressed: () => _audioCache.play('Punch.mp3'),
-                        child: Text('')),
-                  ),
+                  buildButton("assets/images/punch.gif", 'Punch.mp3'),
                 ],
               ),
               SizedBox(height: 20),
@@ -387,44 +166,11 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  Container(
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                            image: AssetImage("assets/images/wtf.gif"),
-                            fit: BoxFit.cover)),
-                    child: FlatButton(
-                        onPressed: () => _audioCache.play('wtf.wav'),
-                        child: Text('')),
-                  ),
+                  buildButton("assets/images/wtf.gif", 'wtf.wav'),
                   SizedBox(width: 20),
-                  Container(
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                            image: AssetImage("assets/images/dezeNuts.gif"),
-                            fit: BoxFit.cover)),
-                    child: FlatButton(
-                        onPressed: () => _audioCache.play('Deez Nuts.wav'),
-                        child: Text('')),
-                  ),
+                  buildButton("assets/images/dezeNuts.gif", 'Deez Nuts.wav'),
                   SizedBox(width: 20),
-                  Container(
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                            image: AssetImage("assets/images/chripChrip.gif"),
-                            fit: BoxFit.cover)),
-                    child: FlatButton(
-                        onPressed: () => _audioCache.play('Cricket.mp3'),
-                        child: Text('')),
-                  ),
+                  buildButton("assets/images/chripChrip.gif", 'Cricket.mp3'),
                 ],
               ),
               SizedBox(height: 20),
@@ -433,46 +179,11 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  Container(
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                            image: AssetImage("assets/images/nani.gif"),
-                            fit: BoxFit.cover)),
-                    child: FlatButton(
-                        onPressed: () => _audioCache.play('nani.mp3'),
-                        child: Text('')),
-                  ),
+                  buildButton("assets/images/nani.gif", 'nani.mp3'),
                   SizedBox(width: 20),
-                  Container(
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                            image: AssetImage("assets/images/bruh.gif"),
-                            fit: BoxFit.cover)),
-                    child: FlatButton(
-                        onPressed: () => _audioCache.play('bruh.mp3'),
-                        child: Text('')),
-                  ),
+                  buildButton("assets/images/bruh.gif", 'bruh.mp3'),
                   SizedBox(width: 20),
-                  Container(
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                            image: AssetImage("assets/images/hereWeGo.gif"),
-                            fit: BoxFit.cover)),
-                    child: FlatButton(
-                        onPressed: () => _audioCache.play(
-                              'Here We Go.mp3',
-                            ),
-                        child: Text('')),
-                  ),
+                  buildButton("assets/images/hereWeGo.gif", 'Here We Go.mp3'),
                 ],
               ),
               SizedBox(height: 20),
@@ -481,46 +192,11 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  Container(
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                            image: AssetImage("assets/images/easy.gif"),
-                            fit: BoxFit.cover)),
-                    child: FlatButton(
-                        onPressed: () => _audioCache.play('easy.wav'),
-                        child: Text('')),
-                  ),
+                  buildButton("assets/images/easy.gif", 'easy.wav'),
                   SizedBox(width: 20),
-                  Container(
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                            image: AssetImage("assets/images/illuminati.gif"),
-                            fit: BoxFit.cover)),
-                    child: FlatButton(
-                        onPressed: () => _audioCache.play('illuminati.wav'),
-                        child: Text('')),
-                  ),
+                  buildButton("assets/images/illuminati.gif", 'illuminati.wav'),
                   SizedBox(width: 20),
-                  Container(
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                            image: AssetImage("assets/images/ok.gif"),
-                            fit: BoxFit.cover)),
-                    child: FlatButton(
-                        onPressed: () => _audioCache.play(
-                              'ok.wav',
-                            ),
-                        child: Text('')),
-                  ),
+                  buildButton("assets/images/ok.gif", 'ok.wav')
                 ],
               ),
               SizedBox(height: 20),
@@ -529,46 +205,13 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  Container(
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                            image: AssetImage("assets/images/outtaNowhere.gif"),
-                            fit: BoxFit.cover)),
-                    child: FlatButton(
-                        onPressed: () => _audioCache.play('Outta Nowhere.wav'),
-                        child: Text('')),
-                  ),
+                  buildButton(
+                      "assets/images/outtaNowhere.gif", 'Outta Nowhere.wav'),
                   SizedBox(width: 20),
-                  Container(
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                            image: AssetImage("assets/images/twoHourLater.gif"),
-                            fit: BoxFit.cover)),
-                    child: FlatButton(
-                        onPressed: () => _audioCache.play('Two HoursLater.wav'),
-                        child: Text('')),
-                  ),
+                  buildButton(
+                      "assets/images/twoHourLater.gif", 'Two HoursLater.wav'),
                   SizedBox(width: 20),
-                  Container(
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                            image: AssetImage("assets/images/whooaahh.gif"),
-                            fit: BoxFit.cover)),
-                    child: FlatButton(
-                        onPressed: () => _audioCache.play(
-                              'wooaah.wav',
-                            ),
-                        child: Text('')),
-                  ),
+                  buildButton("assets/images/whooaahh.gif", 'wooaah.wav'),
                 ],
               ),
               SizedBox(height: 20),
@@ -577,47 +220,13 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  Container(
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                            image:
-                                AssetImage("assets/images/hereWeGoAgain.gif"),
-                            fit: BoxFit.cover)),
-                    child: FlatButton(
-                        onPressed: () =>
-                            _audioCache.play('AhShitHereWeGoAgain.wav'),
-                        child: Text('')),
-                  ),
+                  buildButton("assets/images/hereWeGoAgain.gif",
+                      'AhShitHereWeGoAgain.wav'),
                   SizedBox(width: 20),
-                  Container(
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                            image:
-                                AssetImage("assets/images/areYouSerious.gif"),
-                            fit: BoxFit.cover)),
-                    child: FlatButton(
-                        onPressed: () => _audioCache.play('AreYouSerious.wav'),
-                        child: Text('')),
-                  ),
+                  buildButton(
+                      "assets/images/areYouSerious.gif", 'AreYouSerious.wav'),
                   SizedBox(width: 20),
-                  Container(
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                            image: AssetImage("assets/images/damn.gif"),
-                            fit: BoxFit.cover)),
-                    child: FlatButton(
-                        onPressed: () => _audioCache.play('damn.wav'),
-                        child: Text('')),
-                  ),
+                  buildButton("assets/images/damn.gif", 'damn.wav'),
                 ],
               ),
               SizedBox(height: 20),
@@ -626,47 +235,13 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  Container(
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                            image:
-                                AssetImage("assets/images/lookAtTihDude.gif"),
-                            fit: BoxFit.cover)),
-                    child: FlatButton(
-                        onPressed: () => _audioCache.play('LookAtThisDude.wav'),
-                        child: Text('')),
-                  ),
+                  buildButton(
+                      "assets/images/lookAtTihDude.gif", 'LookAtThisDude.wav'),
                   SizedBox(width: 20),
-                  Container(
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                            image: AssetImage("assets/images/hellNo.gif"),
-                            fit: BoxFit.cover)),
-                    child: FlatButton(
-                        onPressed: () => _audioCache.play('OhHellNo.wav'),
-                        child: Text('')),
-                  ),
+                  buildButton("assets/images/hellNo.gif", 'OhHellNo.wav'),
                   SizedBox(width: 20),
-                  Container(
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                            image: AssetImage(
-                                "assets/images/somebodyTochaMySpaget.gif"),
-                            fit: BoxFit.cover)),
-                    child: FlatButton(
-                        onPressed: () =>
-                            _audioCache.play('SomebodyTouchaMySpaget.wav'),
-                        child: Text('')),
-                  ),
+                  buildButton("assets/images/somebodyTochaMySpaget.gif",
+                      'SomebodyTouchaMySpaget.wav'),
                 ],
               ),
               SizedBox(height: 20),
@@ -675,49 +250,14 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  Container(
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                            image: AssetImage("assets/images/surpriseMF.gif"),
-                            fit: BoxFit.cover)),
-                    child: FlatButton(
-                        onPressed: () =>
-                            _audioCache.play('SurpriseMotherFcker.wav'),
-                        child: Text('')),
-                  ),
+                  buildButton("assets/images/surpriseMF.gif",
+                      'SurpriseMotherFcker.wav'),
                   SizedBox(width: 20),
-                  Container(
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                            image:
-                                AssetImage("assets/images/missionFailed.gif"),
-                            fit: BoxFit.cover)),
-                    child: FlatButton(
-                        onPressed: () =>
-                            _audioCache.play('WellGetEmNextTime.wav'),
-                        child: Text('')),
-                  ),
+                  buildButton("assets/images/missionFailed.gif",
+                      'WellGetEmNextTime.wav'),
                   SizedBox(width: 20),
-                  Container(
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                            image: AssetImage(
-                                "assets/images/whyAreYouRunning.gif"),
-                            fit: BoxFit.cover)),
-                    child: FlatButton(
-                        onPressed: () =>
-                            _audioCache.play('WHYAREYOURUNNING.wav'),
-                        child: Text('')),
-                  ),
+                  buildButton("assets/images/whyAreYouRunning.gif",
+                      'WHYAREYOURUNNING.wav'),
                 ],
               ),
               SizedBox(height: 20),
@@ -726,44 +266,11 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  Container(
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                            image: AssetImage("assets/images/waitaMinute.gif"),
-                            fit: BoxFit.cover)),
-                    child: FlatButton(
-                        onPressed: () => _audioCache.play('WhoAreYou.wav'),
-                        child: Text('')),
-                  ),
+                  buildButton("assets/images/waitaMinute.gif", 'WhoAreYou.wav'),
                   SizedBox(width: 20),
-                  Container(
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                            image: AssetImage("assets/images/HAHAHA.gif"),
-                            fit: BoxFit.cover)),
-                    child: FlatButton(
-                        onPressed: () => _audioCache.play('HAHAHA.wav'),
-                        child: Text('')),
-                  ),
+                  buildButton("assets/images/HAHAHA.gif", 'HAHAHA.wav'),
                   SizedBox(width: 20),
-                  Container(
-                    width: 100,
-                    height: 100,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                            image: AssetImage("assets/images/sayWhat.gif"),
-                            fit: BoxFit.cover)),
-                    child: FlatButton(
-                        onPressed: () => _audioCache.play('SayWhat.wav'),
-                        child: Text('')),
-                  ),
+                  buildButton("assets/images/sayWhat.gif", 'SayWhat.wav'),
                 ],
               ),
               SizedBox(height: 20),
