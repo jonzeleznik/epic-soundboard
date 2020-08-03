@@ -10,7 +10,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  AudioCache _audioCache;
+   AudioCache _audioCache;
 
   Widget buildButton(String gif, String sound) {
     return Container(
@@ -196,7 +196,7 @@ class _HomePageState extends State<HomePage> {
                   SizedBox(width: 20),
                   buildButton("assets/images/illuminati.gif", 'illuminati.wav'),
                   SizedBox(width: 20),
-                  buildButton("assets/images/ok.gif", 'ok.wav')
+                  buildButton("assets/images/ok.gif", 'ok.mp3')
                 ],
               ),
               SizedBox(height: 20),

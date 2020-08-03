@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "918675115721",
+    "firebase_url": "https://soundboard-a13df.firebaseio.com",
+    "project_id": "soundboard-a13df",
+    "storage_bucket": "soundboard-a13df.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:918675115721:android:d5769c406d969de6f94718",
+        "android_client_info": {
+          "package_name": "jonzeleznik.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "918675115721-sjk172i8j69aqjies0pih7io7uhvli8t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTOATJiczuoCN6y7oHl3GXIP2ClBIFM-A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "918675115721-sjk172i8j69aqjies0pih7io7uhvli8t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
