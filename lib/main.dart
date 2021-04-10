@@ -10,9 +10,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-   AudioCache _audioCache;
+  AudioCache _audioCache;
 
-  // Build custom button
   Widget buildButton(String gif, String sound) {
     return Container(
       width: 100,
@@ -23,11 +22,12 @@ class _HomePageState extends State<HomePage> {
       child:
           TextButton(onPressed: () => _audioCache.play(sound), child: Text('')),
     );
-  } // buildButton
+  }
 
   @override
   void initState() {
     super.initState();
+    // create this only once
     _audioCache = AudioCache(
         prefix: "audio/",
         fixedPlayer: AudioPlayer()..setReleaseMode(ReleaseMode.STOP));
@@ -196,7 +196,7 @@ class _HomePageState extends State<HomePage> {
                   SizedBox(width: 20),
                   buildButton("assets/images/illuminati.gif", 'illuminati.wav'),
                   SizedBox(width: 20),
-                  buildButton("assets/images/ok.gif", 'ok.mp3')
+                  buildButton("assets/images/ok.gif", 'ok.wav')
                 ],
               ),
               SizedBox(height: 20),
@@ -270,7 +270,7 @@ class _HomePageState extends State<HomePage> {
                   SizedBox(width: 20),
                   buildButton("assets/images/HAHAHA.gif", 'HAHAHA.wav'),
                   SizedBox(width: 20),
-                  buildButton("assets/images/sayWhat.gif", 'SayWhat.wav'),  
+                  buildButton("assets/images/sayWhat.gif", 'SayWhat.wav'),
                 ],
               ),
               SizedBox(height: 20),

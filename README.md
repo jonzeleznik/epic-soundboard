@@ -1,6 +1,6 @@
 # EPIC-SOUNDBOARD
 
-This is my soundboard app with 
+This is my soundboard app with gifs.
 
 ## Getting Started
 
