@@ -79,13 +79,13 @@ class _HomePageState extends State<HomePage> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   buildButton(
-                      "assets/images/gotchaBitch.gif", 'Gotcha Bitch.mp3'),
+                      "assets/images/a_loh_nehas.gif", 'a_loh_nehas.mp3'), ///////////
                   SizedBox(width: 20),
                   buildButton(
-                      "assets/images/thatsRacist.gif", "That's Racist.mp3"),
+                      "assets/images/eghh.gif", "eghh.mp3"), ///////////
                   SizedBox(width: 20),
-                  buildButton("assets/images/whatTheFWasThat.gif",
-                      'What in the Fck was that.mp3'),
+                  buildButton("assets/images/hoces.gif", ///////////
+                      'hoces.mp3'),
                 ],
               ),
               SizedBox(height: 20),
@@ -94,13 +94,13 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  buildButton("assets/images/wow.gif", 'Anime wow.mp3'),
+                  buildButton("assets/images/zadavu_te_bom.gif", 'zadavu_te_bom.mp3'), ///////////
                   SizedBox(width: 20),
                   buildButton(
-                      "assets/images/itIsWhatItIs.gif", 'IT IS WHAT IT IS.mp3'),
+                      "assets/images/mona.gif", 'mona.mp3'), ///////////
                   SizedBox(width: 20),
-                  buildButton("assets/images/ImBrokeAsShit.gif",
-                      'IM BROKE AS SHIT.mp3'),
+                  buildButton("assets/images/presc.gif",
+                      'presc.mp3'), ///////////
                 ],
               ),
 
@@ -110,12 +110,12 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  buildButton("assets/images/helloMF.gif", 'Hello Mf.mp3'),
+                  buildButton("assets/images/rehko.gif", 'rehko.mp3'), ///////////
                   SizedBox(width: 20),
-                  buildButton("assets/images/gaay.gif", 'HaGay.mp3'),
+                  buildButton("assets/images/stop_it.gif", 'stop_it.mp3'), ///////////
                   SizedBox(width: 20),
-                  buildButton("assets/images/minecraftPotion.gif",
-                      'Minecraft Drinking.mp3'),
+                  buildButton("assets/images/tok_useku.gif", ///////////
+                      'tok_useku.mp3'),
                 ],
               ),
               SizedBox(height: 20),
@@ -124,8 +124,7 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  buildButton("assets/images/lierlier.gif",
-                      'Liar Liar Pants On Fire.wav'),
+                  buildButton("assets/images/gotchaBitch.gif", 'Gotcha Bitch.mp3'),
                   SizedBox(width: 20),
                   buildButton("assets/images/headShake.gif", 'Head Shake.mp3'),
                   SizedBox(width: 20),
@@ -152,12 +151,11 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  buildButton(
-                      "assets/images/gayShit.gif", 'Missmewiththatgayshit.mp3'),
+                  buildButton("assets/images/wow.gif", 'Anime wow.mp3'),
                   SizedBox(width: 20),
                   buildButton("assets/images/heheBoi.gif", 'heheBoi.mp3'),
                   SizedBox(width: 20),
-                  buildButton("assets/images/punch.gif", 'Punch.mp3'),
+                  buildButton("assets/images/punch.gif", 'Punch.mp3'), 
                 ],
               ),
               SizedBox(height: 20),
@@ -166,7 +164,7 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  buildButton("assets/images/wtf.gif", 'wtf.wav'),
+                  buildButton("assets/images/itIsWhatItIs.gif", 'IT IS WHAT IT IS.mp3'),
                   SizedBox(width: 20),
                   buildButton("assets/images/dezeNuts.gif", 'Deez Nuts.wav'),
                   SizedBox(width: 20),
@@ -192,9 +190,10 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  buildButton("assets/images/easy.gif", 'easy.wav'),
+                  buildButton("assets/images/ImBrokeAsShit.gif",
+                      'IM BROKE AS SHIT.mp3'),
                   SizedBox(width: 20),
-                  buildButton("assets/images/illuminati.gif", 'illuminati.wav'),
+                  buildButton("assets/images/helloMF.gif", 'Hello Mf.mp3'),
                   SizedBox(width: 20),
                   buildButton("assets/images/ok.gif", 'ok.wav')
                 ],
@@ -238,7 +237,7 @@ class _HomePageState extends State<HomePage> {
                   buildButton(
                       "assets/images/lookAtTihDude.gif", 'LookAtThisDude.wav'),
                   SizedBox(width: 20),
-                  buildButton("assets/images/hellNo.gif", 'OhHellNo.wav'),
+                  buildButton("assets/images/gaay.gif", 'HaGay.mp3'),
                   SizedBox(width: 20),
                   buildButton("assets/images/somebodyTochaMySpaget.gif",
                       'SomebodyTouchaMySpaget.wav'),
@@ -253,8 +252,8 @@ class _HomePageState extends State<HomePage> {
                   buildButton("assets/images/surpriseMF.gif",
                       'SurpriseMotherFcker.wav'),
                   SizedBox(width: 20),
-                  buildButton("assets/images/missionFailed.gif",
-                      'WellGetEmNextTime.wav'),
+                  buildButton("assets/images/minecraftPotion.gif",
+                      'Minecraft Drinking.mp3'),
                   SizedBox(width: 20),
                   buildButton("assets/images/whyAreYouRunning.gif",
                       'WHYAREYOURUNNING.wav'),
